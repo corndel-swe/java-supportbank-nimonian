@@ -12,7 +12,7 @@
 - [ ] Add the following environment variable:
 
       ```
-      SECRET_KEY=opensesame
+      SECRET_PASSWORD=opensesame
       ```
 
 - [ ] Test, commit and push!
@@ -50,6 +50,10 @@ In this exercise, we'll be fetching data from the
 
 - [ ] Return the body of the response directly, i.e. return a string of JSON
       rather than an object.
+
+> [!WARNING]
+>
+> Make sure to set the Content-Type header to application/json
 
 ## Extension
 

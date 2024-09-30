@@ -1,6 +1,6 @@
 package com.corndel.supportbank.exercises;
 
-// import java.nio.file.*;
+import java.nio.file.*;
 
 public class Adder {
   /**
@@ -12,15 +12,21 @@ public class Adder {
    * @return The sum of the numbers in the file.
    */
   public int add(String fileName) {
-    // TODO: Read the file
-    // Hint: Use Paths.get() and Files.readAllLines()
 
-    // TODO: Add up the numbers
-    // Hint: Use a loop
-    // Hint: Use Integer.parseInt
+    try {
+      int sum = 0;
+      var path = Paths.get("src", "data", fileName);
+      var file = Files.readAllLines(path);
 
-    // TODO: Return the sum
-    return 0;
+      for (var line : file) {
+        sum += Integer.parseInt(line);
+      }
+
+      return sum;
+    } catch (Exception e) {
+      System.out.println("Something went wrong");
+      return 0;
+    }
   }
 
   /**
